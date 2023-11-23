@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --background-primary: #eee;
+  --loading-upper: #2da2ff;
+  --loading-right: #ff337a;
+  --loading-lower: #ffff00;
+  --loading-left: #00ff00;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+}
+
+/* Loader */
+.weather__information--loading{
+  height: 20px;
+  width: 20px;
+  /* background: red; */
+  position: relative;
+}
+.weather__information--loading .ball {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  /* background: blue; */
+  border-radius: 50%;
+}
+
+.weather__information--loading .upper{
+  left: 0;
+  top: -20px;
+  background: var(--loading-upper);
+  animation: upper 0.8s infinite alternate-reverse;
+}
+.weather__information--loading .right {
+  bottom: 0;
+  right: -20px;
+  background: var(--loading-right);
+  animation: right 0.8s infinite alternate-reverse;
+}
+
+.weather__information--loading .lower{
+  bottom: -20px;
+  right: 0;
+  background: var(--loading-lower);
+  animation: lower 0.8s infinite alternate-reverse;
+}
+.weather__information--loading .left {
+  left: -20px;
+  top: 0;
+  background: var(--loading-left);
+  animation: left 0.8s infinite alternate-reverse;
+
+}
+
+
+@keyframes upper{
+  50%, 100%{
+    top: 20px;
+  }
+}
+
+@keyframes right{
+  50%, 100%{
+    right: 20px;
+  }
+}
+
+@keyframes lower{
+  50%, 100%{
+    bottom: 20px;
+  }
+}
+
+@keyframes left{
+  50%, 100%{
+    left: 20px;
+  }
+}
+
+/* End Loader */
