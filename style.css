@@ -69,26 +69,30 @@ body{
 
 @keyframes upper{
   50%, 100%{
-    top: 20px;
+    top: 15px;
   }
 }
 
 @keyframes right{
   50%, 100%{
-    right: 20px;
+    right: 15px;
   }
 }
 
 @keyframes lower{
   50%, 100%{
-    bottom: 20px;
+    bottom: 15px;
   }
 }
 
 @keyframes left{
   50%, 100%{
-    left: 20px;
+    left: 15px;
   }
 }
 
 /* End Loader */
+
+/* Search Box */
+
+/* End Search Box */
