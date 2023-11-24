@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather</title>
   <link rel="stylesheet" href="./style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <script src="./script.js" defer></script>
 </head>
 <body>
   <div class="weather__container">
     <div class="weather__container--search-container">
-      
+      <form action="" class="search__container--form">
+        <input class="search__container--input" type="text" placeholder="Enter your city name: ">
+        <button class="search__container--btn" type="submit"><i class="bx bx-search"></i></button>
+      </form>
     </div>
 
     <div class="weather__information">
