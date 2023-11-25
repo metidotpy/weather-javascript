@@ -10,10 +10,10 @@
 </head>
 <body>
   <div class="weather__container">
-    <div class="weather__container--search-container">
-      <form action="" class="search__container--form">
-        <input class="search__container--input" type="text" placeholder="Enter your city name: ">
-        <button class="search__container--btn" type="submit"><i class="bx bx-search"></i></button>
+    <div class="weather__search--container">
+      <form action="" class="weather__search--form">
+        <input class="weather__search--input" type="text" placeholder="Enter your city name: ">
+        <button class="weather__search--btn" type="submit"><i class="bx bx-search"></i></button>
       </form>
     </div>
 
@@ -24,9 +24,13 @@
         <div class="lower ball"></div>
         <div class="left ball"></div>
       </div>
+      <div class="weather__information--card">
+        <div class="weather__information--row weather__information--main-row">
+          <img src="./icons/sun.png" class="weather__information--icon" alt="">
 
-      
-
+          <p class="weather__information--degree">27&#x2103;</p>
+        </div>
+      </div>
     </div>
   </div>
 </body>
