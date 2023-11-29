@@ -1,0 +1,17 @@
+{
+  "name": "weather-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^3.2.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}
