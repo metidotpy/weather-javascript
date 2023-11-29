@@ -16,7 +16,7 @@
 }
 
 body{
-  height: 100vh;
+  /* height: 100vh; */
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
@@ -25,9 +25,12 @@ body{
 }
 
 .weather__container{
+  height: 100vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  gap: 5rem;
   flex-direction: column;
 }
 
@@ -38,8 +41,8 @@ body{
   align-items: center;
   margin: auto;
   width: 100%;
-  position: absolute;
-  top: 16rem;
+  /* position: absolute; */
+  /* top: 14rem; */
 }
 .weather__search--form {
   width: 100%;
@@ -56,8 +59,8 @@ body{
   flex: 1;
   border: 0;
   outline: none;
-  padding: 24px 20px;
-  font-size: 20px;
+  padding: 15px 20px;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -83,14 +86,32 @@ body{
 
 /* Weather information */
 .weather__information {
+  /* top: 10rem; */
+  /* position: absolute; */
+  width: 100%;
   position: relative;
+  margin-bottom: 5rem;
 }
 
 .weather__information--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
   z-index: 10000;
 }
 
+.weather__information--row {
+  margin-top: 1rem;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .weather__information--main-row{
+  margin-top: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,6 +127,15 @@ body{
   width: 4.5rem;
   height: 4.5rem;
   object-fit: cover;
+}
+
+
+
+.line{
+  width: 50%;
+  height: 4px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* End Weather information */
