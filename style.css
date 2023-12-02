@@ -21,6 +21,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
   background: #eee;
 }
 
@@ -28,21 +29,23 @@ body{
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 5rem;
   flex-direction: column;
+  /* overflow: auto; */
 }
 
 /* Search Box */
 .weather__search--container {
+  position: fixed;
+  top: 1.5rem;
   display: flex ;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: auto;
   width: 100%;
-  /* position: absolute; */
-  /* top: 14rem; */
+  gap: 1rem;
 }
 .weather__search--form {
   width: 100%;
@@ -82,15 +85,23 @@ body{
   cursor: pointer;
 }
 
+.weather__search--error{
+  font-weight: 600;
+  color: var(--loading-right);
+  font-size: 12px;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.weather__search--error.hide {
+  opacity: 0;
+}
+
 /* End Search Box */
 
 /* Weather information */
 .weather__information {
-  /* top: 10rem; */
-  /* position: absolute; */
   width: 100%;
   position: relative;
-  margin-bottom: 5rem;
 }
 
 .weather__information--card {
@@ -104,7 +115,7 @@ body{
 
 .weather__information--row {
   margin-top: 1rem;
-  width: 30%;
+  width: 35%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,16 +153,21 @@ body{
 
 /* Loader */
 .weather__information--loading{
-  z-index: -2;
   height: 20px;
   width: 20px;
-  /* background: red; */
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translateX(-900px);
+  /* transition: translate 1s;   */
   /* transform: translate(-50%, 50%); */
+}
+
+.weather__information--loading.hide {
+  z-index: -2;
   transform: translateX(-10000%);
 }
+
 .weather__information--loading .ball {
   position: absolute;
   height: 20px;
@@ -164,26 +180,26 @@ body{
   left: 0;
   top: -20px;
   background: var(--loading-upper);
-  animation: upper 0.8s infinite alternate-reverse;
+  animation: upper 0.5s infinite alternate-reverse;
 }
 .weather__information--loading .right {
   bottom: 0;
   right: -20px;
   background: var(--loading-right);
-  animation: right 0.8s infinite alternate-reverse;
+  animation: right 0.5s infinite alternate-reverse;
 }
 
 .weather__information--loading .lower{
   bottom: -20px;
   right: 0;
   background: var(--loading-lower);
-  animation: lower 0.8s infinite alternate-reverse;
+  animation: lower 0.5s infinite alternate-reverse;
 }
 .weather__information--loading .left {
   left: -20px;
   top: 0;
   background: var(--loading-left);
-  animation: left 0.8s infinite alternate-reverse;
+  animation: left 0.5s infinite alternate-reverse;
 
 }
 
