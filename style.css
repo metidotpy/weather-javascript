@@ -114,8 +114,10 @@ body{
 }
 
 .weather__information--row {
+  position: relative;
   margin-top: 1rem;
-  width: 35%;
+  padding: 0 2rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,11 +145,32 @@ body{
 
 
 .line{
-  width: 50%;
-  height: 4px;
-  border-radius: 30px;
+  position: absolute;
+  display: inline;
+  width: 20rem;
+  height: 3px;
+  border-radius: 60px;
   background: rgba(0, 0, 0, 0.7);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
+
+.weather__information--side1,
+.weather__information--side2 {
+  /* width: 20rem; */
+  /* flex-shrink: 0; */
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.lazy-load{
+  opacity: 0;
+  /* animation: show-info 2s 1 forwards; */
+  /* animation-delay: 5s; */
+}
+
+
 
 /* End Weather information */
 
@@ -203,7 +226,6 @@ body{
 
 }
 
-
 @keyframes upper{
   50%, 100%{
     top: 15px;
@@ -229,3 +251,40 @@ body{
 }
 
 /* End Loader */
+
+
+/* Animations */
+@keyframes show-info {
+  from{
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* End Animations */
+
+/* Responsive */
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 40em) {
+
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+
+}
+
+/* End Responsive */
